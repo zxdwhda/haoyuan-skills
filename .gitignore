@@ -1,0 +1,25 @@
+# macOS
+.DS_Store
+
+# Secrets
+.env
+
+# Node
+node_modules/
+
+# Syncthing / cloud-sync conflict copies
+.sync-conflict-*
+
+# Local recovery / corrupted git directories
+.git.corrupt-*
+
+# Generated images (keep directory, ignore files)
+*/assets/output/*.png
+*/assets/banners/*.png
+
+# Local Claude Code project settings
+.claude/settings.local.json
+
+# Internal project instructions
+CLAUDE.md
+AGENTS.md
