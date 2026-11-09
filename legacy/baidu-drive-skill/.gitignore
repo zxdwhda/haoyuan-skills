@@ -1,0 +1,49 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build outputs
+dist-tsc/
+# 注意:skill/assets/dist/pan.cjs 是发布产物,必须随 git 提交
+# (Plugin Marketplace 用户安装时不会执行 npm run build,直接使用仓库内的 pan.cjs)
+# 若发现产物过期:rm skill/assets/dist/pan.cjs && npm run build
+skill/assets/dist/*.js
+skill/assets/dist/*.map
+
+# Test outputs
+coverage/
+.nyc_output/
+*.lcov
+
+# Editor / OS
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# Env / secrets
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# Scratch
+.cache/
+tmp/
+.tmp/
+
+# Local fixtures with real tokens (must not commit)
+tests/fixtures/*.live.json
+
+# Plan / agent artifacts (local only)
+.claude/

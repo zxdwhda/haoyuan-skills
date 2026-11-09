@@ -1,0 +1,57 @@
+{
+  "name": "baidu-drive-pro",
+  "version": "0.0.1-alpha.0",
+  "description": "Open-source Baidu Netdisk Skill for Claude Code, direct OpenAPI integration, no binary dependencies.",
+  "keywords": [
+    "baidu-netdisk",
+    "baidu-drive",
+    "claude-code",
+    "skill",
+    "ai-agent",
+    "cli"
+  ],
+  "license": "MIT",
+  "author": "baidu-drive-skill contributors",
+  "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "skill/",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "build": "node esbuild.config.mjs",
+    "build:watch": "node esbuild.config.mjs --watch",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint 'src/**/*.ts' 'tests/**/*.ts'",
+    "clean": "rm -rf skill/assets/dist node_modules/.cache",
+    "prepublishOnly": "npm run typecheck && npm run test && npm run build"
+  },
+  "dependencies": {
+    "commander": "^12.1.0",
+    "picocolors": "^1.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.7",
+    "@typescript-eslint/eslint-plugin": "^7.7.0",
+    "@typescript-eslint/parser": "^7.7.0",
+    "@vitest/coverage-v8": "^1.5.0",
+    "esbuild": "^0.20.2",
+    "eslint": "^8.57.0",
+    "nock": "^13.5.4",
+    "tsx": "^4.7.2",
+    "typescript": "^5.4.5",
+    "vitest": "^1.5.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baidu-drive-skill/baidu-drive-skill.git"
+  },
+  "homepage": "https://github.com/baidu-drive-skill/baidu-drive-skill"
+}

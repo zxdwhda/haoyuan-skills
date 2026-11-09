@@ -1,76 +1,33 @@
-<div align="center">
+# Haoyuan Skills
 
-**中文** · [English](./README.en.md)
+我使用和整理的 AI 技能集合。一个仓库收录多个技能，当前维护内容与历史快照分开管理。
 
-# 🧰 Zion's Skills
+## 当前维护
 
-#### 我自己每天在用的一些 AI Skill，都开源在这里
+| 技能 | 用途 | 验证范围 |
+|---|---|---|
+| [haoyuan-title-strategist](haoyuan-title-strategist/README.md) | 从文章事实出发，生成、比较和修改公众号标题 | 纯指令，入口及引用检查；不承诺流量效果 |
 
-[![License](https://img.shields.io/badge/License-MIT-3B82F6?style=for-the-badge)](./LICENSE)
-[![AgentSkills](https://img.shields.io/badge/AgentSkills-Standard-8B5CF6?style=for-the-badge)](https://agentskills.io)
+“当前维护”说明维护意向，不等于所有工具、平台或业务效果均已验证。[验证记录](docs/validation.md)逐项说明边界。
 
-![Claude Code](https://img.shields.io/badge/Claude_Code-Skill-D97706?style=flat-square&logo=anthropic&logoColor=white)
-![Codex](https://img.shields.io/badge/Codex-Skill-10B981?style=flat-square&logo=openai&logoColor=white)
-![OpenCode](https://img.shields.io/badge/OpenCode-Skill-3B82F6?style=flat-square)
-![OpenClaw](https://img.shields.io/badge/OpenClaw-Skill-8B5CF6?style=flat-square)
+## 历史版本
 
-</div>
+[legacy](legacy/README.md) 保存百度网盘、Kimi 编排及旧公众号技能的源码快照，不再作为当前推荐，不承诺兼容最新平台。原仓库暂时保留，完整提交历史仍可追溯。
 
-都是在自己项目里跑通了一段时间，确实省事，才搬出来开源的。没什么花活，就是几个挺实用的东西。
+## 安装
 
-这里的每个 Skill 都是 Agent 能直接加载的结构化指令集，遵循 [Agent Skills](https://agentskills.io) 开放标准。Claude Code、Codex、OpenCode、OpenClaw 都能装。
-
----
-
-## 📋 目录
-
-| 名字 | 一句话 |
-|---|---|
-| 📝 [**wechat-article（公众号文章生成）**](#-wechat-article公众号文章生成) | 输入一个选题，自动生成短文风格公众号文章 + 即梦 AI 配图，直接上传到微信公众平台草稿箱 |
-
----
-
-## 📦 安装方式
-
-在 Claude Code、Codex、OpenClaw 等支持 Skill 的 Agent 里，直接说：
-
-```
-帮我安装这个 skill：https://github.com/zionxaviardamienang/skills/tree/main/<skill-name>
+```sh
+git clone https://github.com/zxdwhda/haoyuan-skills.git
 ```
 
-把 `<skill-name>` 换成你想装的那个。Agent 会自己 clone 到对应目录，不用你操心路径。
+只选择所需的当前技能目录，按其 README 安装。不要把整个仓库复制到 Agent 的技能目录，也不要运行递归批量安装。`legacy/` 目录名不能阻止第三方安装器发现其中的 `SKILL.md`；本项目目前只提供逐个目录安装方式，未验证第三方安装器的扫描规则。
 
----
+## 后续收录
 
-## ✨ Skills
+[收录清单](docs/catalog.md) 区分当前维护、历史保留、公开候选和暂不公开内容。[新增指南](docs/adding-skills.md)说明新技能的结构。当前技能放根目录，专用脚本、参考资料和素材保留在对应技能内。
 
-<a id="-skills"></a>
+本仓沿用原 `zxdwhda/skills` 的 Git 历史和仓库身份。旧工作区的未提交修改未合并进公开版本。
 
-<table>
-<tr><td>
+## 许可
 
-### 📝 wechat-article（公众号文章生成）
-
-> *"输入一个选题，AI 自动写文章、用即梦生图、一键上传到微信公众平台草稿箱。"*
-
-一个端到端的微信公众号内容生产管道：
-
-- **阶段一：内容创作** — 根据选题生成短文风格文章（前言 + 3~5 段正文 + 后记），写作风格温暖治愈
-- **阶段二：生成配图** — 调用即梦 API（豆包 Seedream 4.0）为每个主体段落生成配图
-- **阶段三：组装 HTML** — 将文字 + 图片组装成微信公众平台兼容的 HTML
-- **阶段四：上传草稿** — 通过微信公众平台 API 直接上传到草稿箱
-
-**环境要求：** 火山引擎 ARK API Key + 微信公众平台 AppID / AppSecret
-
-</td></tr>
-</table>
-
----
-
-## 🤝 贡献
-
-欢迎提 Issue 和 PR。如果你也有好用的 Skill 想分享，可以直接 PR 加进来。
-
-## 📄 许可
-
-[MIT](./LICENSE) © 2025 Zion
+沿用原仓的 [MIT License](LICENSE)。引入内容分别保留原许可证，详见 [来源说明](THIRD_PARTY_NOTICES.md)。目录组织参考 yichen-skills，没有复制其技能实现。

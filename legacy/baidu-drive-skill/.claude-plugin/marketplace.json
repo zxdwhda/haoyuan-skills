@@ -1,0 +1,22 @@
+{
+  "name": "baidu-drive-skill",
+  "owner": {
+    "name": "zxdwhda",
+    "url": "https://github.com/zxdwhda"
+  },
+  "metadata": {
+    "description": "百度网盘开源 Claude Code Skill — 通过官方 OpenAPI 直连,纯 TypeScript 实现,无外部 binary、无独立 server。",
+    "version": "0.0.1-alpha.0"
+  },
+  "plugins": [
+    {
+      "name": "baidu-drive-pro",
+      "description": "百度网盘 Skill — 登录 / ls / 上传 / 下载 / 搜索 / 分享 / 移动 / 重命名 / 受保护删除。默认沙盒 /apps/<your-app>/,可配置全盘。",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skill"
+      ]
+    }
+  ]
+}
